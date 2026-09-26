@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sweet Crumbs | Cake Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🍰 Sweet Crumbs
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cakes">Cakes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="cart">
+                🛒 Cart <span id="cart-count">0</span>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="subtitle">Freshly Baked With Love ❤️</p>
+
+            <h1>
+                Make Every Moment
+                <span>Extra Sweet</span>
+            </h1>
+
+            <p>
+                Delicious handmade cakes, cupcakes and desserts
+                made fresh especially for you.
+            </p>
+
+            <a href="#cakes" class="hero-button">
+                Explore Our Cakes
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+    <section class="categories">
+
+        <h2>What Are You Craving?</h2>
+
+        <div class="category-container">
+
+            <div class="category">
+                <div class="category-icon">🎂</div>
+                <h3>Birthday Cakes</h3>
+                <p>Make birthdays unforgettable.</p>
+            </div>
+
+            <div class="category">
+                <div class="category-icon">💍</div>
+                <h3>Wedding Cakes</h3>
+                <p>Beautiful cakes for your special day.</p>
+            </div>
+
+            <div class="category">
+                <div class="category-icon">🧁</div>
+                <h3>Cupcakes</h3>
+                <p>Small treats with big flavour.</p>
+            </div>
+
+            <div class="category">
+                <div class="category-icon">🍫</div>
+                <h3>Chocolate Cakes</h3>
+                <p>Perfect for chocolate lovers.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Cakes -->
+    <section id="cakes" class="cakes-section">
+
+        <p class="section-label">OUR SPECIALITIES</p>
+
+        <h2>Our Delicious Cakes</h2>
+
+        <div class="filter-buttons">
+            <button onclick="filterCakes('all')">All</button>
+            <button onclick="filterCakes('chocolate')">Chocolate</button>
+            <button onclick="filterCakes('fruit')">Fruit</button>
+            <button onclick="filterCakes('birthday')">Birthday</button>
+        </div>
+
+
+        <div class="cake-grid">
+
+            <div class="cake-card chocolate">
+                <div class="cake-image chocolate-bg">
+                    🍫
+                </div>
+
+                <div class="cake-info">
+                    <h3>Chocolate Truffle</h3>
+
+                    <p>
+                        Rich chocolate cake with creamy chocolate
+                        truffle frosting.
+                    </p>
+
+                    <div class="price-row">
+                        <strong>₹699</strong>
+
+                        <button onclick="addToCart('Chocolate Truffle')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cake-card fruit">
+                <div class="cake-image strawberry-bg">
+                    🍓
+                </div>
+
+                <div class="cake-info">
+                    <h3>Strawberry Dream</h3>
+
+                    <p>
+                        Soft vanilla cake layered with fresh
+                        strawberry cream.
+                    </p>
+
+                    <div class="price-row">
+                        <strong>₹749</strong>
+
+                        <button onclick="addToCart('Strawberry Dream')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cake-card chocolate">
+                <div class="cake-image red-bg">
+                    ❤️
+                </div>
+
+                <div class="cake-info">
+                    <h3>Red Velvet</h3>
+
+                    <p>
+                        Classic red velvet cake with smooth
+                        cream cheese frosting.
+                    </p>
+
+                    <div class="price-row">
+                        <strong>₹799</strong>
+
+                        <button onclick="addToCart('Red Velvet')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cake-card fruit">
+                <div class="cake-image mango-bg">
+                    🥭
+                </div>
+
+                <div class="cake-info">
+                    <h3>Mango Delight</h3>
+
+                    <p>
+                        Fresh mango cream cake made with
+                        delicious seasonal mangoes.
+                    </p>
+
+                    <div class="price-row">
+                        <strong>₹749</strong>
+
+                        <button onclick="addToCart('Mango Delight')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cake-card birthday">
+                <div class="cake-image birthday-bg">
+                    🎂
+                </div>
+
+                <div class="cake-info">
+                    <h3>Birthday Special</h3>
+
+                    <p>
+                        A colourful celebration cake perfect
+                        for birthdays.
+                    </p>
+
+                    <div class="price-row">
+                        <strong>₹899</strong>
+
+                        <button onclick="addToCart('Birthday Special')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cake-card chocolate">
+                <div class="cake-image coffee-bg">
+                    ☕
+                </div>
+
+                <div class="cake-info">
+                    <h3>Coffee Mocha</h3>
+
+                    <p>
+                        Delicious coffee cake with creamy
+                        mocha frosting.
+                    </p>
+
+                    <div class="price-row">
+                        <strong>₹699</strong>
+
+                        <button onclick="addToCart('Coffee Mocha')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="about">
+
+        <div class="about-content">
+
+            <div class="about-emoji">
+                🧁
+            </div>
+
+            <div>
+                <p class="section-label">ABOUT US</p>
+
+                <h2>Baked With Love</h2>
+
+                <p>
+                    At Sweet Crumbs, we believe every celebration
+                    deserves something delicious. Our cakes are
+                    freshly baked using quality ingredients and
+                    lots of love.
+                </p>
+
+                <p>
+                    From birthdays and weddings to simple
+                    celebrations, we're here to make your moments
+                    a little sweeter.
+                </p>
+
+                <a href="#contact" class="about-button">
+                    Order Your Cake
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Testimonials -->
+    <section class="reviews">
+
+        <p class="section-label">CUSTOMER LOVE</p>
+
+        <h2>What Our Customers Say</h2>
+
+        <div class="review-grid">
+
+            <div class="review">
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "The chocolate truffle cake was absolutely
+                    delicious! Everyone loved it."
+                </p>
+
+                <h4>— Ananya</h4>
+            </div>
+
+
+            <div class="review">
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "Beautiful cake, fresh ingredients and
+                    excellent service."
+                </p>
+
+                <h4>— Rahul</h4>
+            </div>
+
+
+            <div class="review">
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "The perfect birthday cake. It looked amazing
+                    and tasted even better!"
+                </p>
+
+                <h4>— Priya</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <div class="contact-box">
+
+            <div>
+                <p class="section-label">GET IN TOUCH</p>
+
+                <h2>Order Your Dream Cake 🎂</h2>
+
+                <p>
+                    Have a special request? Send us a message
+                    and we'll get back to you.
+                </p>
+
+                <div class="contact-details">
+                    <p>📍 Bengaluru, India</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉️ hello@sweetcrumbs.com</p>
+                </div>
+            </div>
+
+
+            <form onsubmit="submitForm(event)">
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    required
+                >
+
+                <textarea
+                    placeholder="Tell us about your cake..."
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Send Order Request
+                </button>
+
+            </form>
+
+        </div>
+
+        <p id="form-message"></p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            🍰 Sweet Crumbs
+        </div>
+
+        <p>
+            Fresh cakes. Happy moments. Sweet memories.
+        </p>
+
+        <div class="socials">
+            Instagram · Facebook · WhatsApp
+        </div>
+
+        <p class="copyright">
+            © 2026 Sweet Crumbs. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
