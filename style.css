@@ -1,0 +1,563 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --pink: #e86a92;
+    --dark-pink: #c94f77;
+    --light-pink: #fff0f5;
+    --cream: #fffaf5;
+    --brown: #4a2924;
+    --text: #5b4541;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--dark-pink);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--brown);
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+.cart {
+    background: var(--light-pink);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+#cart-count {
+    background: var(--pink);
+    color: white;
+    padding: 2px 7px;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 20% 30%, #ffdce8, transparent 30%),
+        radial-gradient(circle at 80% 70%, #ffe8d5, transparent 30%),
+        #fff4f7;
+
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.subtitle,
+.section-label {
+    color: var(--pink);
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 80px);
+    color: var(--brown);
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--pink);
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.hero-button,
+.about-button {
+    display: inline-block;
+    background: var(--pink);
+    color: white;
+
+    text-decoration: none;
+    padding: 14px 28px;
+
+    border-radius: 30px;
+    margin-top: 20px;
+
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-button:hover,
+.about-button:hover {
+    background: var(--dark-pink);
+    transform: translateY(-2px);
+}
+
+
+/* CATEGORIES */
+
+.categories {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.categories h2,
+.cakes-section h2,
+.about h2,
+.reviews h2,
+.contact h2 {
+    font-size: 40px;
+    color: var(--brown);
+    margin: 10px 0 40px;
+}
+
+.category-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.category {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(100, 50, 50, 0.08);
+
+    transition: 0.3s;
+}
+
+.category:hover {
+    transform: translateY(-8px);
+}
+
+.category-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.category h3 {
+    color: var(--brown);
+}
+
+
+/* CAKES */
+
+.cakes-section {
+    padding: 90px 20px;
+    background: #fff7f3;
+    text-align: center;
+}
+
+.filter-buttons {
+    margin-bottom: 40px;
+}
+
+.filter-buttons button {
+    border: 1px solid var(--pink);
+    background: white;
+    color: var(--dark-pink);
+
+    padding: 9px 20px;
+    margin: 5px;
+
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover {
+    background: var(--pink);
+    color: white;
+}
+
+.cake-grid {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.cake-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(100, 50, 50, 0.1);
+
+    transition: 0.3s;
+}
+
+.cake-card:hover {
+    transform: translateY(-7px);
+}
+
+.cake-image {
+    height: 210px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 80px;
+}
+
+.chocolate-bg {
+    background: #ead3c8;
+}
+
+.strawberry-bg {
+    background: #ffdce5;
+}
+
+.red-bg {
+    background: #f5caca;
+}
+
+.mango-bg {
+    background: #ffe5a8;
+}
+
+.birthday-bg {
+    background: #dcecff;
+}
+
+.coffee-bg {
+    background: #d8c5b8;
+}
+
+.cake-info {
+    padding: 25px;
+    text-align: left;
+}
+
+.cake-info h3 {
+    color: var(--brown);
+    font-size: 22px;
+}
+
+.cake-info p {
+    margin: 10px 0 20px;
+    color: #786563;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-row strong {
+    color: var(--dark-pink);
+    font-size: 22px;
+}
+
+.price-row button,
+form button {
+    background: var(--pink);
+    border: none;
+    color: white;
+
+    padding: 10px 16px;
+    border-radius: 7px;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.price-row button:hover,
+form button:hover {
+    background: var(--dark-pink);
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 100px 20px;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-emoji {
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 150px;
+
+    background: var(--light-pink);
+    border-radius: 30px;
+}
+
+.about-content h2 {
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+
+/* REVIEWS */
+
+.reviews {
+    padding: 90px 20px;
+    text-align: center;
+    background: #fff4f7;
+}
+
+.review-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.review {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.stars {
+    color: #f5b301;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+/* CONTACT */
+
+.contact {
+    padding: 100px 20px;
+}
+
+.contact-box {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+.contact-details {
+    margin-top: 30px;
+}
+
+.contact-details p {
+    margin: 12px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    border: 1px solid #e4d5d2;
+    border-radius: 8px;
+
+    padding: 14px;
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--pink);
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+form button {
+    padding: 14px;
+}
+
+#form-message {
+    text-align: center;
+    color: #239b56;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: var(--brown);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.footer-logo {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.socials {
+    margin: 20px 0;
+    color: #ffd5e2;
+}
+
+.copyright {
+    color: #cdbdb9;
+    font-size: 14px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cake-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content,
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .cart {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .categories h2,
+    .cakes-section h2,
+    .about h2,
+    .reviews h2,
+    .contact h2 {
+        font-size: 32px;
+    }
+
+    .category-container,
+    .cake-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-emoji {
+        height: 250px;
+        font-size: 100px;
+    }
+}
